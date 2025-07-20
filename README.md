@@ -21,13 +21,12 @@ Write meticulous blogs with a clean UI and probably know the spelling of meticul
 ## Steps to run - 
 
 1) Clone this repo
-2) Set up a postgres database and add it to env variables 
-3) Run the following commands
-4) ```
+2) Run the following commands
+3) ```
    npm install
    nodemon index.js
    ```
-5) Go to localhost:3000/books 
+4) Go to localhost:3000/posts  
 
 
 ## Tech Stack - 
