@@ -1,0 +1,176 @@
+/* Fonts */ 
+
+.raleway-400 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+.raleway-400i {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic; 
+}
+
+.raleway-200 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+* { 
+    padding: 0px; 
+}
+
+body { 
+    background-color: honeydew; 
+}
+
+.head { 
+    border: solid 2px teal;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center; 
+    padding: 20px 0px; 
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); 
+}
+
+.create-button { 
+    text-decoration: none; 
+    border: solid 2px teal;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    position: fixed;
+    right: 10px;
+    margin-top: 20px; 
+    color: black; 
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); 
+} 
+
+.no-posts {
+    font-size: 32px; 
+    display: inline-block; 
+} 
+
+.list-item { 
+    font-size: 24px; 
+    margin: 10px 0px; 
+    list-style-position: inside; 
+    border: solid 2px teal;
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+.a-link {
+    text-decoration: none; 
+}
+
+.blog-title { 
+    display: flex; 
+    flex-direction: row; 
+    margin: 20px 0px;  
+}
+
+.blog-title > label { 
+    font-size: 32px; 
+}
+
+.blog-title > input { 
+    flex: 2; 
+    margin-left: 10px; 
+    font-size: 30px; 
+    padding: 2px 4px; 
+}
+
+.blog-content > label { 
+    display: inline-block; 
+    margin-bottom: 10px; 
+    font-size: 28px; 
+}
+
+.blog-content > textarea { 
+    font-size: 24px; 
+    padding: 2px 4px; 
+    box-sizing: border-box; 
+    width: 100%;
+}
+
+.blog-author > label { 
+    display: inline-block; 
+    margin: 20px 0px 10px; 
+    font-size: 28px; 
+} 
+
+.blog-author > input { 
+    font-size: 24px; 
+    padding: 2px 4px; 
+}
+
+.create-new-post { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+} 
+
+.create-new-post > input { 
+    font-size: 28px; 
+    padding: 10px; 
+    border-radius: 4px; 
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); 
+    border-color: teal; 
+} 
+
+.page-contents { 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.content { 
+    overflow-wrap: anywhere; 
+    margin: 40px 60px 0px 5px; 
+    flex: 7; 
+}
+
+.content > p {
+    margin: 0px; 
+    font-size: 24px; 
+}
+
+.buttons { 
+    border: solid 2px teal;
+    border-radius: 4px;
+    width: 30%;
+    margin: 40px 0px 20px;
+    padding: 20px; 
+    flex: 3; 
+    height: min-content; 
+} 
+
+.buttons > small { 
+    margin-top: 20px; 
+    display: inline-block; 
+}
+
+.buttons > p { 
+    margin: 0px 0px 40px;  
+    font-size: 28px; 
+} 
+
+.buttons > form { 
+    display: flex; 
+}
+
+.buttons input { 
+    margin-top: 10px; 
+    padding: 20px 40px; 
+    flex: 1; 
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    font-size: 16px; 
+    border-color: teal;
+}
+
+

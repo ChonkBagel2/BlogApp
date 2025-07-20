@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title> 
+
+    <link rel="stylesheet" href="/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+      <!-- Section for Title, edit button and delete button --> 
+      
+      <div class="head raleway-400i"> 
+        
+        <h1>  
+          <%= title %>
+        </h1>
+      
+      </div> 
+
+
+      <div class="page-contents">
+
+        <div class="content raleway-200">
+
+          <!-- Section for Blog content --> 
+    
+          <p> <%= content %> </p> 
+    
+        </div>
+  
+        <div class="buttons raleway-200">
+          
+          <small> by </small>
+          <p> <%= author %> </p> 
+  
+          <form action="/edit/<%= id %>" method="post"> 
+            <input type="submit" class="raleway-200" name="edit" value="Edit Post"> 
+          </form> 
+          
+          <form action="/delete/<%= id %>" method="post">
+            <input type="submit" class="raleway-200" name="delete" value="Delete Post"> 
+          </form> 
+  
+        </div>
+
+      </div>
+      
+    
+    </section>
+
+  </body>
+</html>

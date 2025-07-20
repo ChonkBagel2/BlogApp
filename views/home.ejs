@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <!-- Top Heading Section  -->
+      <div class="head">
+        <h1 class="raleway-400">Welcome to Blog APP</h1>
+      </div>
+    </section>
+
+    <section>
+      <!-- Show Blog Create Button Here -->
+      <a href="/create" class="create-button raleway-400"> Create Post </a> 
+    </section>
+
+    <section>
+      <!-- Show All Posts Here -->
+      <div>
+
+        <% if ( locals.posts.length > 0 ) { %> 
+
+            <ol> 
+
+                <% posts.forEach( function ( post ) { %> 
+
+                    <% const link = `/posts/${post.id}` %>
+
+                      <a href="<%= link %>" class="a-link">
+                        <li class="list-item raleway-400i">  
+                          <%= post.title %> 
+                        </li> 
+                      </a>
+                  
+                <% }) %> 
+
+            </ol>
+        <% } else { %> 
+          <h2 class="no-posts raleway-200"> 
+            Looks like there are no posts yet 
+          </h2> 
+        <% } %>
+      </div>
+    </section>
+  </body>
+</html>

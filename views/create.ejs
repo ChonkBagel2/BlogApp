@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+    <link rel="stylesheet" href="/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section>
+        <!-- Section to add Title --> 
+
+        <div class="head"> 
+
+            <% if ( !locals.edit ) { %> 
+            
+                <h1 class="raleway-400"> Create a New Post </h1>
+            
+            <% } else { %> 
+                
+                <h1 class="raleway-400"> Edit your Post </h1>    
+            
+            <% } %> 
+
+        </div> 
+    
+    </section>
+
+    <section>
+        <!-- Section to add blog contents --> 
+
+        <% if ( locals.edit ) { %>
+            
+            <form action="/edit-new/<%= post.id %>" method="post"> 
+
+                <div class="blog-title raleway-200">
+                    <label for="Title"> Blog Title </label> 
+                    <input id="Title" name="title" value="<%= post.title %>"> 
+                </div> 
+
+                <div class="blog-content raleway-200">
+                
+                    <label for="Content"> Content </label> <br> 
+                    <textarea id="Content" class="raleway-200" name="content" rows="8"> <%= post.content %> </textarea><br> 
+                
+                </div> 
+
+                <div class="blog-author">
+
+                    <label for="Author" class="raleway-200"> Blog Author </label> <br> 
+                    <input id="Author" class="raleway-200" name="author" value="<%= post.author %>"> <br> 
+                
+                </div> 
+
+                <div class="create-new-post">
+                    <input type="submit" class="raleway-200" value="Edit Post">
+                </div> 
+                
+            </form> 
+
+        <% } else { %>
+
+            <!-- Creating a form --> 
+            <form action="/new-post" method="post"> 
+
+                <div class="blog-title raleway-200">
+                    <label for="Title"> Blog Title </label> 
+                    <input id="Title" name="title" required> 
+                </div> 
+
+
+                <div class="blog-content raleway-200">
+                
+                    <label for="Content"> Content </label> <br> 
+                    <textarea id="Content" class="raleway-200" name="content" rows="8" required></textarea> <br> 
+                
+                </div> 
+
+
+                <div class="blog-author">
+
+                    <label for="Author" class="raleway-200"> Blog Author </label> <br> 
+                    <input id="Author" class="raleway-200" name="author" required> <br> 
+                
+                </div>
+
+
+                <div class="create-new-post">
+                    <input type="submit" class="raleway-200" value="Create Post">
+                </div>
+
+            </form> 
+        <% } %>
+    </section>
+</body>
+</html>
